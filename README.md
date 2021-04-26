@@ -19,3 +19,17 @@ npm install hexo-electric-clock-plus --save
 ``` 
 
 - 然后根据 Zfour 大佬的[教程](https://zfe.space/post/hexo-electric-clock.html)走即可。
+
+- 新增了一个字体选项，字体文件来源还是 Zfour 大佬的 [Butterfly-clock](https://github.com/Zfour/Butterfly-clock) 仓库：
+```yaml
+electric_clock:
+  font: Ringing # UnidreamLED(default),Commodore,Computerfont,Digitalsystem,Gameover,Hacked,LCD,Leddisplay,Ringing
+  priority: 5
+  enable: true
+  enable_page: all
+  layout:
+    type: class
+    name: sticky_layout
+    index: 0
+  temple_html: '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img id="card-clock-loading" src="https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus@master/images/weather/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading" class="entered loading"></div></div></div></div></div>'
+```
