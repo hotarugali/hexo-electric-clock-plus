@@ -66,7 +66,7 @@ function common_injector(name, item_comfig, temple_html_text, js_text, css_text)
 hexo.extend.filter.register('after_generate', function () {
     if (hexo.config.electric_clock.enable) {
         var electric_clock = hexo.config.electric_clock;
-        var css_text = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus/css/clock.css">`;
+        var css_text = `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus@master/css/clock.css">`;
         var js_text = `<script type="text/javascript">
             loc = $.ajax({
                     url: "https://ipapi.co/json/",  //json文件位置，文件名
@@ -77,7 +77,7 @@ hexo.extend.filter.register('after_generate', function () {
                     }
                 }); 
             cur_ip=$.parseJSON(loc.responseText).ip;
-        </script><script data-pjax src="https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus/js/clock.js"></script>`
+        </script><script data-pjax src="https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus@master/js/clock.js"></script>`
 
         common_injector('electric_clock', electric_clock, electric_clock.temple_html, js_text, css_text)
     }
