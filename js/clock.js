@@ -1,7 +1,3 @@
-if (typeof font !== 'undefined') {
-    document.getElementsByClassName('clock-row').fontFamily = font;
-    document.getElementsByClassName('card-clock-time').fontFamily = font;
-}
 fetch('https://wttr.in/?format="%l+\\+%c+\\+%t+\\+%h"').then(res=>res.text()).then(
     data => {
        if(document.getElementById('hexo_electric_clock')){
@@ -58,9 +54,20 @@ fetch('https://wttr.in/?format="%l+\\+%c+\\+%t+\\+%h"').then(res=>res.text()).th
             return (zero + num).slice(-digit);
         }
         
+        function modifyFont() {
+            // console.log(font)
+            if (typeof font !== 'undefined') {
+                var clock_rows = document.getElementsByClassName('clock-row');
+                for (var i = 0; i < clock_rows.length; i++) {
+                    // console.log(clock_rows[i].style.fontFamily);
+                    clock_rows[i].style.fontFamily = font;
+                }
+            }
+        }
+
         var timerID = setInterval(updateTime, 1000);
         updateTime();
-           
+        modifyFont();
         // console.log(res_list)
        }
     }
