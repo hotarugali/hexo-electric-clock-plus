@@ -1,6 +1,6 @@
 if (typeof font !== 'undefined') {
-    document.getElementsByClassName('clock-row').style.fontFamily = font;
-    document.getElementsByClassName('card-clock-time').style.fontFamily = font;
+    document.getElementsByClassName('clock-row').fontFamily = font;
+    document.getElementsByClassName('card-clock-time').fontFamily = font;
 }
 fetch('https://wttr.in/?format="%l+\\+%c+\\+%t+\\+%h"').then(res=>res.text()).then(
     data => {
