@@ -19,7 +19,7 @@ function priority_electric_clock(){
 function common_injector(name, item_comfig, temple_html_text, js_text, css_text) {
     if (item_comfig.enable) {
         if (item_comfig.font !== '') {
-            var font_info_js = `var font=${item_comfig.font}`
+            var font_info_js = `<script type="text/javascript">var font=${item_comfig.font}</script>`
             hexo.extend.injector.register('body_end', font_info_js, "default");
         }
         if (temple_html_text !== '') {

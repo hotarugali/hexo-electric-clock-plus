@@ -1,4 +1,4 @@
-if (font !== '') {
+if (typeof font !== 'undefined') {
     document.getElementsByClassName('clock-row').style.fontFamily = font;
     document.getElementsByClassName('card-clock-time').style.fontFamily = font;
 }
