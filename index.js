@@ -80,7 +80,7 @@ hexo.extend.filter.register('after_generate', function () {
             version=$.parseJSON(loc.responseText).version;
             city=$.parseJSON(loc.responseText).city;
             country=$.parseJSON(loc.responseText).country_name;
-        </script><script data-pjax src="js/clock.js"></script>`
+        </script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-electric-clock-plus@latest/js/clock.js"></script>`
 
         common_injector('electric_clock', electric_clock, electric_clock.temple_html, js_text, css_text)
     }
