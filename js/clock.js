@@ -1,7 +1,7 @@
 fetch('https://wttr.in/?format="%l+\\+%c+\\+%t+\\+%h"').then(res=>res.text()).then(
     data => {
        if(document.getElementById('hexo_electric_clock')){
-        var res_text = data.replace(/not found/g,'not found,not found').replace(/"/g,'').replace(/\+/g,'').replace(/,/g,'\\').replace(/ /g,'').replace(/°C/g,'');
+        var res_text = data.replace(/not found/g,'not found').replace(/"/g,'').replace(/\+/g,'').replace(/,/g,'\\').replace(/ /g,'').replace(/°C/g,'');
         res_list = res_text.split('\\');
         var clock_box = document.getElementById('hexo_electric_clock');
         clock_box_html = `  
@@ -16,8 +16,12 @@ fetch('https://wttr.in/?format="%l+\\+%c+\\+%t+\\+%h"').then(res=>res.text()).th
     <span id="card-clock-dackorlight" class="card-clock-dackorlight"></span>
 </div>
 <div class="clock-row">
-    <span class="card-clock-ip">${cur_ip}</span>
+    <span class="card-clock-ip">${ip}</span>
+    <span class="card-clock-version">${version}</span>
+</div>
+<div class="clock-row">
     <span class="card-clock-location">${res_list[0]}</span>
+    <span class="card-clock-location">${res_list[1]}</span>
 </div>
 `;
         var week = ['SUN', 'MON', 'TUE', 'WED','THU' ,'FRI', 'SAT'];

@@ -75,9 +75,12 @@ hexo.extend.filter.register('after_generate', function () {
                     async: false,
                     success: function(data) {       //请求成功完成后要执行的方法 
                     }
-                }); 
-            cur_ip=$.parseJSON(loc.responseText).ip;
-        </script><script data-pjax src="https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus@1.2.2/js/clock.js"></script>`
+                });
+            ip=$.parseJSON(loc.responseText).ip;
+            version=$.parseJSON(loc.responseText).version;
+            city=$.parseJSON(loc.responseText).city;
+            country=$.parseJSON(loc.responseText).country_name;
+        </script><script data-pjax src="https://cdn.jsdelivr.net/npm/hexo-electric-clock-plus@latest/js/clock.js"></script>`
 
         common_injector('electric_clock', electric_clock, electric_clock.temple_html, js_text, css_text)
     }
