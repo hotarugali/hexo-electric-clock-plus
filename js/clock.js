@@ -17,11 +17,10 @@ fetch('https://wttr.in/?format="%l+\\+%c+\\+%t+\\+%h"').then(res=>res.text()).th
 </div>
 <div class="clock-row">
     <span class="card-clock-ip">${ip}</span>
-    <span class="card-clock-version">${version}</span>
 </div>
 <div class="clock-row">
-    <span class="card-clock-location">${res_list[0]}</span>
-    <span class="card-clock-location">${res_list[1]}</span>
+    <span class="card-clock-city">${res_list[0]}</span>
+    <span class="card-clock-country">${res_list[1]}</span>
 </div>
 `;
         var week = ['SUN', 'MON', 'TUE', 'WED','THU' ,'FRI', 'SAT'];

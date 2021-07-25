@@ -1,38 +1,38 @@
 @font-face {
     font-family: 'UnidreamLED';
-    src: url("https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus@master/fonts/UnidreamLED.ttf")
+    src: url("https://cdn.jsdelivr.net/npm/hexo-electric-clock-plus@latest/fonts/UnidreamLED.ttf")
 }
 @font-face {
     font-family: 'Commodore';
-    src: url("https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus@master/fonts/Commodore.ttf")
+    src: url("https://cdn.jsdelivr.net/npm/hexo-electric-clock-plus@latest/fonts/Commodore.ttf")
 }
 @font-face {
     font-family: 'Computerfont';
-    src: url("https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus@master/fonts/Computerfont.ttf")
+    src: url("https://cdn.jsdelivr.net/npm/hexo-electric-clock-plus@latest/fonts/Computerfont.ttf")
 }
 @font-face {
     font-family: 'Digitalsystem';
-    src: url("https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus@master/fonts/Digitalsystem.ttf")
+    src: url("https://cdn.jsdelivr.net/npm/hexo-electric-clock-plus@latest/fonts/Digitalsystem.ttf")
 }
 @font-face {
     font-family: 'Gameover';
-    src: url("https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus@master/fonts/Gameover.ttf")
+    src: url("https://cdn.jsdelivr.net/npm/hexo-electric-clock-plus@latest/fonts/Gameover.ttf")
 }
 @font-face {
     font-family: 'Hacked';
-    src: url("https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus@master/fonts/Hacked.ttf")
+    src: url("https://cdn.jsdelivr.net/npm/hexo-electric-clock-plus@latest/fonts/Hacked.ttf")
 }
 @font-face {
     font-family: 'LCD';
-    src: url("https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus@master/fonts/LCD.ttf")
+    src: url("https://cdn.jsdelivr.net/npm/hexo-electric-clock-plus@latest/fonts/LCD.ttf")
 }
 @font-face {
     font-family: 'Leddisplay';
-    src: url("https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus@master/fonts/Leddisplay.ttf")
+    src: url("https://cdn.jsdelivr.net/npm/hexo-electric-clock-plus@latest/fonts/Leddisplay.ttf")
 }
 @font-face {
     font-family: 'Ringing';
-    src: url("https://cdn.jsdelivr.net/gh/hotarugali/hexo-electric-clock-plus@master/fonts/Ringing.ttf")
+    src: url("https://cdn.jsdelivr.net/npm/hexo-electric-clock-plus@latest/fonts/Ringing.ttf")
 }
 #hexo_electric_clock{
     padding:20px
@@ -41,7 +41,7 @@
     padding: 0!important;
 }
 .card-background {
-    height: 153px;
+    height: 175px;
     margin: 15px;
     border-radius: 8px;
     background-color: #ececec;
@@ -57,11 +57,11 @@
     flex-wrap: nowrap;
     white-space: nowrap;
 }
-.card-clock-clockdate,.card-clock-ip{
+.card-clock-clockdate,.card-clock-ip,.card-clock-city{
     text-align: left;
     flex-basis: calc(40% - 5px);
 }
-.c.card-clock-weather,ard-clock-humidity,.card-clock-location{
+.card-clock-weather,.card-clock-humidity,.card-clock-country{
     text-align: right;
     flex-basis: calc(30% - 5px);
 }
