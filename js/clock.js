@@ -16,10 +16,13 @@ fetch('https://wttr.in/?format="%l+\\+%c+\\+%t+\\+%h"').then(res=>res.text()).th
     <span id="card-clock-dackorlight" class="card-clock-dackorlight"></span>
 </div>
 <div class="clock-row">
+    <span class="card-clock-placeholder"></span>
     <span class="card-clock-ip">${ip}</span>
+    <span class="card-clock-placeholder"></span>
 </div>
 <div class="clock-row">
     <span class="card-clock-city">${res_list[0]}</span>
+    <span class="card-clock-placeholder"></span>
     <span class="card-clock-country">${res_list[1]}</span>
 </div>
 `;
@@ -30,7 +33,7 @@ fetch('https://wttr.in/?format="%l+\\+%c+\\+%t+\\+%h"').then(res=>res.text()).th
         function updateTime() {
             var cd = new Date();
             var card_clock_time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
-            var card_clock_date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' '+ week[cd.getDay()];
+            var card_clock_date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth()+1, 2) + '-' + zeroPadding(cd.getDate(), 2) + '  '+ week[cd.getDay()];
             var card_clock_dackorlight = cd.getHours();
             var card_clock_dackorlight_str;
             if(card_clock_dackorlight >12) {
